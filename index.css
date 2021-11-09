@@ -1,0 +1,117 @@
+/* 
+    This file is used for specifying the appearance of home page for Masks website using CSS.
+
+Linked with index.html
+
+*/
+html{
+  /*default font size in browser 16px * 62.5= 10px= 1rem (1 rem is good for cross platform)*/
+  font-size: 62.5%; 
+  /*able to modify sizing*/
+  box-sizing: border-box;
+}
+body{
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root{
+  height:100%;
+}
+/* . means new class 
+  Layout */
+.grid-container{
+  display:grid;
+  grid-template-areas: 
+  'header'
+  'main'
+  'footer';
+  /* rem= (relative length)font size of the root element, fr= fraction */
+  grid-template-columns: 1fr; 
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header{
+  grid-area: header;
+  background-color: #203040;
+}
+main{
+  grid-area: main;
+  padding:1rem;
+
+}
+footer{
+  grid-area: footer;
+  background-color: #203040;
+  color: #ffffff;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Common */
+h1{
+  font-size: 1.8rem;
+  padding:1rem 0;
+}
+h2{
+  font-size: 1.6rem;
+  padding:1rem 0;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color:#ff8000;
+  text-decoration: underline;
+}
+
+/* Header */
+header a{
+  color: #ffffff;
+  padding:1rem;
+  text-decoration: none;
+}
+a.brand{
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center{
+  justify-content: center;
+}
+/* Images */
+img{
+  border-radius: .5rem;
+}
+img.medium{
+  max-width:29rem;
+  width: 100%;
+}
+/* Card */
+.card{
+  border: 0.1rem #c0c0c0 solid;
+  background-color: #f8f8f8;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body{
+  padding:1rem;
+}
+.card-body >*{
+  /* "> * " means will apply to all direct child  */
+  margin-bottom: 0.5rem;
+}
+.price{
+  font-size:2rem;
+}
