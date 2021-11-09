@@ -1,5 +1,3 @@
-// Part 8 of https://youtu.be/TRCDsB9i3bI?t=4801
-// React app: npm start
 import React from 'react';
 import {BrowserRouter, Route} from 'react-router-dom';
 import Product from './components/Product';
